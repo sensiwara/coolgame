@@ -22,7 +22,6 @@ let level = 1;
 
 function checkLevelUp() {
     if (clicks >= maxClicks) {
-        clicks = 0;
         const sound = document.getElementById('win-sound');
         sound.play();
 
@@ -30,6 +29,7 @@ function checkLevelUp() {
         fadeScreen.classList.add('show');
 
         setTimeout(() => {
+            clicks=0;
             level += 1; 
             upgradeCost = 10; 
             clickValue = 1;
