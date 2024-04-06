@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pelmenya Clicker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="loading-screen" class="loading-screen">
+        <p id="greeting-text" class="hidden">Привет!</p>
+        <p id="instruction-text" class="hidden">Кликай на Лебедева посреди экрана. Чем больше уровень - тем сложнее перейти на следующий.</p>
+    </div>
+    <audio id="buy-sound" src="buy.mp3"></audio>
+    <audio id="win-sound" src="win.mp3"></audio>
+    <div id="fade-screen"></div>
+    <div id="level-badge">Уровень 1</div>
+    <button id="info-btn">ℹ️</button>
+    <div id="info-modal" class="modal"></div>
+    <div id="counter">0/1000 ааа</div>
+    <div class="game-container">
+        <div id="pelmenya-container">
+            <img id="pelmenya" src="dumpling.png" alt="Pelmenya">
+        </div>
+    </div>
+    <div class="footer">
+        <button id="upgrade-btn">Улучшить</button>
+        <div id="upgrade-info">
+            <p id="current-price"></p>
+            <p id="upgrade-cost"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

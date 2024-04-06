@@ -1,0 +1,186 @@
+@font-face {
+    font-family: "Pragamtica";
+    src: url("font.ttf") format(truetype);
+    
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    margin: 0;
+    color: white;
+    font-family: "Pragamtica";
+    background-color: #272727;
+}
+
+
+
+#counter {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 5vh;
+}
+
+.game-container {
+    text-align: center;
+    border-radius: 10px;
+}
+
+#pelmenya {
+    width: 200px;
+    cursor: pointer;
+}
+
+#pelmenya-container {
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+       
+}
+
+.footer {
+    width: 70vw;
+    height: 10vh;
+    background-color: #333;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#upgrade-info p {
+    margin-top: 0px;
+    margin-bottom: 5px; 
+}
+
+#upgrade-btn {
+    -webkit-tap-highlight-color: transparent;
+    padding: 10px 20px;
+    border: none;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-right: 20px;
+
+}
+
+#upgrade-info {
+    color: white;
+    text-align: left;
+}
+
+#fade-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0;
+    z-index: 999;
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#fade-screen.show {
+    opacity: 1;
+}
+
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s;
+    z-index: 1000;
+}
+
+.hidden, .visible {
+    text-align: center;
+    max-width: 60%; 
+    margin: 0 auto; 
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.visible {
+    opacity: 1;
+}
+
+@media (max-width: 515px) {
+    .footer {
+        flex-direction: column;
+        height: 20vh; 
+    }
+
+    #upgrade-btn, #upgrade-info p {
+        font-size: 4vw; 
+    }
+
+    #upgrade-info p {
+        margin-top: 10px; 
+        margin-bottom: None; 
+    }
+}
+
+#level-badge {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #ffffff; 
+    color: rgb(0, 0, 0); 
+    padding: 5px 10px; 
+    border-radius: 5px; 
+    font-size: 16px;
+}
+
+#info-btn {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #ff0000;
+    width: 80%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.modal-content.show {
+    opacity: 1;
+}
